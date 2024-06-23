@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello QuotesController!{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h6>Liste des aricles</h6>
+        <turbo-frame id="articles">
+            <p>Chargement des articles</p>
+            <a href="{{ path('app.quotes.list') }}" data-turbo-prefetch="false" data-turbo-frame="articles">Voir les articles</a>
+        </turbo-frame>
+
+    </div>
+{% endblock %}
